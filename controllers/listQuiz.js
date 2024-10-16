@@ -1,4 +1,4 @@
-import { getAllQuiz } from "../services/api.js";
+import { getAllQuiz ,deleteQuiz} from "../services/api.js";
 
 const app = {
     renderListQuiz: async function () {
@@ -14,13 +14,25 @@ const app = {
                 <td>${item.isActive ? `<span class="badge text-bg-success">Kích hoạt</span>` : `<span class="badge text-bg-danger">Chưa kích hoạt</span>`}</td>
                 <td>${item.time}</td>
                 <td>${item.description}</td>
-                <td></td>
+                <td><button data-id="${item.id}" class="btn_delete btn btn-danger">Xóa</button></td>
             </tr>
             `
         }).join("");
 
+        this.handleDelete();
     },
 
+    handleDelete: function(){
+        const btnDelete = document.querySelectorAll('.btn_delete');
+        btnDelete.forEach((item)=>{
+            item.addEventListener('click',()=>{
+                if (window.confirm('Bạn có chắc chắn muốn xóa quiz không')) {
+                    const id = item.dataset.id;
+                    deleteQuiz(id);
+                }
+            })
+        })
+    },
     start: function () {
         this.renderListQuiz()
     }

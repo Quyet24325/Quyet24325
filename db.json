@@ -46,34 +46,6 @@
       "isActive": "",
       "time": "120",
       "description": "mô tả"
-    },
-    {
-      "id": "800f",
-      "title": "quyet",
-      "isActive": "",
-      "time": "20",
-      "description": ""
-    },
-    {
-      "id": "0643",
-      "title": "quyet vu",
-      "isActive": "",
-      "time": "50",
-      "description": ""
-    },
-    {
-      "id": "c148",
-      "title": "ben trai",
-      "isActive": "",
-      "time": "10",
-      "description": ""
-    },
-    {
-      "id": "b289",
-      "title": "aaaaaaa",
-      "isActive": "",
-      "time": "100",
-      "description": ""
     }
   ],
   "questions": [
@@ -368,7 +340,7 @@
           "answerTitle": "4"
         }
       ],
-      "quizId": "b289",
+      "quizId": null,
       "type": 1,
       "correctAnser": [
         "2"
@@ -395,7 +367,7 @@
           "answerTitle": "4"
         }
       ],
-      "quizId": "b289",
+      "quizId": null,
       "type": 1,
       "correctAnser": [
         "2"

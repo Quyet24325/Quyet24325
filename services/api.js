@@ -66,3 +66,13 @@ export const addQuestions = async (datas) => {
         alert("Lỗi")
     }
 }
+
+export const deleteQuiz = async(id)=>{
+    try {
+        await fetch(`http://localhost:3000/quizs/${id}`,{method: 'delete'})
+        alert('Xóa thành công');
+        
+    } catch (error) {
+        alert("Lỗi")
+    }
+} 
